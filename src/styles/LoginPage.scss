@@ -1,0 +1,139 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+  padding: 16px;
+
+  .login-card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+
+    h1 {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 16px;
+
+        &:last-of-type {
+          margin-bottom: 24px;
+        }
+
+        label {
+          font-size: 12px;
+          color: var(--text-muted);
+          display: block;
+          margin-bottom: 6px;
+          text-transform: capitalize;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px 14px;
+          border-radius: 8px;
+          font-size: 14px;
+          border: 1px solid #e5e7eb;
+          outline: none;
+          transition: border-color 0.2s;
+
+          &:focus {
+            border-color: var(--primary);
+          }
+
+          &.error {
+            border-color: #ef4444;
+          }
+        }
+
+        .error-message {
+          color: #ef4444;
+          font-size: 12px;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .alert-error {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      color: #dc2626;
+      font-size: 13px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        opacity: 0.9;
+      }
+    }
+
+    .forgot-link {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+
+    .help-text {
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .login-container {
+    .login-card {
+      padding: 24px;
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}
