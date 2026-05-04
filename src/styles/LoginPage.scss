@@ -1,15 +1,15 @@
 .login-container {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--gradient);
-  padding: 16px;
 
   .login-card {
     background: var(--surface);
     border-radius: 16px;
-    padding: 40px;
+    padding: 56px;
     width: 100%;
     max-width: 400px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
@@ -129,7 +129,7 @@
 @media (max-width: 640px) {
   .login-container {
     .login-card {
-      padding: 24px;
+      padding: 40px;
 
       h1 {
         font-size: 24px;
